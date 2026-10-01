@@ -1,0 +1,157 @@
+{
+  "store_info": {
+    "name": "DANGER PANEL PRO",
+    "tagline": "High-performance automated game loaders, bypass injectors & instant key delivery",
+    "badge": "14 Verified",
+    "discord_url": "https://discord.gg/dangerpanel",
+    "telegram_url": "https://t.me/dangerpanel",
+    "whatsapp_url": "https://wa.me/dangerpanel",
+    "badges": [
+      {
+        "text": "14 VERIFIED",
+        "type": "orange"
+      },
+      {
+        "text": "UNDETECTED",
+        "type": "green"
+      },
+      {
+        "text": "INSTANT DELIVERY",
+        "type": "red"
+      }
+    ]
+  },
+  "categories": [
+    "ALL",
+    "ALL PANEL",
+    "BLOODSTRIKE",
+    "PUBG PANEL",
+    "PUBG",
+    "FREE FIRE",
+    "PC PANEL",
+    "Windows",
+    "Emulators",
+    "Android",
+    "Utility"
+  ],
+  "downloads": {
+    "emulator": {
+      "name": "Optimized Emulator",
+      "type": "Emulator",
+      "version": "v5.2.1-Bypass",
+      "description": "High-FPS pre-configured emulator with built-in anti-detection & 120FPS bypass.",
+      "url": "https://example.com/downloads/DangerPanel_Emulator_Setup.zip",
+      "file_size": "420 MB",
+      "icon": "emulator"
+    },
+    "apk": {
+      "name": "Safe Modded APK",
+      "type": "APK",
+      "version": "v1.108.x (OBB 54)",
+      "description": "Custom anti-ban APK with auto-headshot hook, antenna, and ESP features.",
+      "url": "https://example.com/downloads/DangerPanel_Client_OBB54.apk",
+      "file_size": "85 MB",
+      "icon": "apk"
+    },
+    "exe": {
+      "name": "External Panel Loader",
+      "type": "EXE",
+      "version": "v4.9.0-Final",
+      "description": "Undetected external memory injector with Fake Lag, Aimbot, and Stream-Proof ESP.",
+      "url": "https://example.com/downloads/DangerPanel_External_Loader.exe",
+      "file_size": "18 MB",
+      "icon": "exe"
+    }
+  },
+  "products": [
+    {
+      "title": "UID BYPASS",
+      "badge": "1.0",
+      "badge_color": "red",
+      "image": "/uploads/c24ccdd5269b44.png",
+      "description": "",
+      "has_video": false,
+      "featured": false,
+      "categories": [
+        "FREE FIRE"
+      ],
+      "packages": [
+        {
+          "id": "uid-bypass-0-7day",
+          "duration": "7 DAY",
+          "price_usd": 0.5,
+          "price_bdt": 500
+        }
+      ],
+      "id": "uid-bypass-6529"
+    }
+  ],
+  "keys": [
+    {
+      "key": "RED-VIP-9999",
+      "product_id": "bloodstrike-panel",
+      "duration": "Life Time Access",
+      "max_uses": -1,
+      "used_by": [
+        "demo_user"
+      ],
+      "created_at": "2026-09-08 00:00:00"
+    },
+    {
+      "key": "DEMO-KEY-1USE",
+      "product_id": "gameloop-bypass",
+      "duration": "30 Day Access",
+      "max_uses": 1,
+      "used_by": [],
+      "created_at": "2026-09-08 00:00:00"
+    },
+    {
+      "key": "OR-HEX-C6378320",
+      "product_id": "hex-fake-lag-ad69",
+      "duration": "7 DAY",
+      "max_uses": 1,
+      "used_by": [
+        "demo_user"
+      ],
+      "created_at": "2026-09-12 01:54:05"
+    }
+  ],
+  "users": {
+    "demo_user": {
+      "id": "demo_user",
+      "email": "wahida@dangerpanel.shop",
+      "name": "wahida_parvin_r",
+      "credits": 0.0,
+      "role": "USER",
+      "licenses": [
+        {
+          "key": "RED-VIP-9999",
+          "product_id": "bloodstrike-panel",
+          "product_title": "BLOODSTRIKE PANEL",
+          "duration": "Life Time Access",
+          "claimed_at": "2026-09-08 00:00:00"
+        },
+        {
+          "key": "OR-HEX-C6378320",
+          "product_id": "hex-fake-lag-ad69",
+          "product_title": "HEX FAKE LAG",
+          "duration": "7 DAY",
+          "claimed_at": "2026-09-12 01:54:05"
+        }
+      ]
+    }
+  },
+  "orders": [
+    {
+      "id": "da1095eb",
+      "user_id": "demo_user",
+      "product_title": "HEX FAKE LAG",
+      "duration": "7 DAY",
+      "price_usd": 2,
+      "price_bdt": 200,
+      "key": "OR-HEX-C6378320",
+      "payment_method": "bKash",
+      "date": "2026-09-12 01:54:05"
+    }
+  ]
+}

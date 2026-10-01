@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANGER PANEL PRO | Premium Game Loaders & Bypass Injectors</title>
+  <meta name="description" content="High-performance automated game loaders, bypass injectors & instant key delivery for Blood Strike, PUBG Mobile, Free Fire and Emulators.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- MAIN APP WRAPPER -->
+  <div class="app-layout">
+    <!-- ===================================================
+         LEFT SIDEBAR (Screenshot 3: DANGER PANEL PRO)
+         =================================================== -->
+    <aside class="sidebar-drawer" id="sidebarDrawer">
+      <!-- Top Brand Logo -->
+      <div class="sidebar-brand-box">
+        <div class="sidebar-logo">
+          <div class="logo-icon-fire">🔥</div>
+          <span class="logo-text">DANGER PANEL</span>
+          <span class="logo-badge-pro">PRO</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close sidebar">&times;</button>
+      </div>
+
+      <!-- User Profile Card (Wahida Parvin) -->
+      <div class="sidebar-user-card" id="sidebarUserCard" title="User Account Settings">
+        <div class="user-avatar-circle" id="userAvatarCircle">W</div>
+        <div class="user-info-text">
+          <div class="user-handle" id="userHandle">wahida_parvin_r</div>
+          <div class="user-status-pill">
+            <span class="online-indicator"></span>
+            <span>ONLINE • USER</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <button class="nav-item active" id="navStoreBtn">
+          <span class="nav-icon">🛒</span>
+          <span>Store</span>
+        </button>
+
+        <div class="nav-section-title">MAIN PORTAL</div>
+
+        <button class="nav-item" id="navProfileBtn">
+          <span class="nav-icon">👤</span>
+          <span>Profile</span>
+        </button>
+
+        <button class="nav-item" id="navHelpBtn">
+          <span class="nav-icon">❓</span>
+          <span>Help</span>
+        </button>
+
+        <button class="nav-item download-item" id="navDownloadsBtn">
+          <span class="nav-icon">📥</span>
+          <span>Downloads</span>
+          <span class="nav-badge unlocked" id="downloadNavBadge">UNLOCKED</span>
+        </button>
+
+        <button class="nav-item" id="navClaimKeyBtn">
+          <span class="nav-icon">🎟️</span>
+          <span>Claim License</span>
+        </button>
+
+        <!-- Social Channels Section (Screenshot 3) -->
+        <div class="nav-channels-group">
+          <a href="https://t.me/dangerpanel" target="_blank" rel="noopener noreferrer" class="channel-link">
+            <div class="channel-info">
+              <span class="channel-icon telegram-icon">✈️</span>
+              <span>Telegram Channel</span>
+            </div>
+            <span class="join-badge">Join</span>
+          </a>
+          <a href="https://discord.gg/dangerpanel" target="_blank" rel="noopener noreferrer" class="channel-link">
+            <div class="channel-info">
+              <span class="channel-icon discord-icon">💬</span>
+              <span>Discord Server</span>
+            </div>
+            <span class="join-badge">Join</span>
+          </a>
+          <a href="https://wa.me/dangerpanel" target="_blank" rel="noopener noreferrer" class="channel-link">
+            <div class="channel-info">
+              <span class="channel-icon whatsapp-icon">📱</span>
+              <span>WhatsApp Channel</span>
+            </div>
+            <span class="join-badge">Join</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Sidebar Bottom: Log Out -->
+      <div class="sidebar-bottom">
+        <button class="logout-btn" id="sidebarLogoutBtn">
+          <span class="logout-icon">🚪</span>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Sidebar Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===================================================
+         MAIN VIEW WRAPPER
+         =================================================== -->
+    <div class="main-content-wrapper">
+      <!-- TOP NAVIGATION BAR -->
+      <header class="top-nav-bar">
+        <div class="top-left">
+          <button class="mobile-toggle-btn" id="sidebarToggleBtn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="header-breadcrumb-tag" id="headerTopTag">
+            <span class="live-dot green"></span>
+            <span id="headerTopStatus">SYSTEM OPERATIONAL &bull; UNDETECTED</span>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <!-- Notification Bell -->
+          <button class="icon-btn notification-btn" id="notificationBtn" title="View Notifications">
+            <span class="bell-icon">🔔</span>
+            <span class="notif-badge">1</span>
+          </button>
+
+          <!-- Credits Wallet Pill (Screenshot 3: © 0 Credit) -->
+          <div class="credit-pill" id="creditWalletPill" title="Manage Credits & Wallet">
+            <span class="credit-symbol">©</span>
+            <span class="credit-amount" id="userCreditAmount">0 Credit</span>
+            <div class="credit-avatar" id="creditAvatar">W</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===================================================
+           VIEW 1: STORE VIEW (Screenshot 3)
+           =================================================== -->
+      <main class="app-view active" id="storeView">
+        <!-- Store Banner Header -->
+        <div class="store-header-banner">
+          <div class="store-header-left">
+            <div class="store-icon-box">🛍️</div>
+            <div class="store-header-titles">
+              <div class="store-title-row">
+                <h1 class="store-heading">Premium Products</h1>
+                <span class="verified-count-badge" id="verifiedCountBadge">14 Verified</span>
+              </div>
+              <p class="store-subtitle">High-performance automated game loaders, bypass injectors & instant key delivery</p>
+            </div>
+          </div>
+
+          <div class="store-header-right">
+            <div class="store-search-bar">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="Search products, games..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Tabs Filter -->
+        <div class="category-tabs-container">
+          <div class="category-tabs" id="categoryTabs">
+            <!-- Dynamically populated from JS -->
+          </div>
+        </div>
+
+        <!-- Products Grid (Screenshot 3) -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </main>
+
+      <!-- ===================================================
+           VIEW 2: PRODUCT DETAIL VIEW (Screenshots 1, 2, 4, 5)
+           =================================================== -->
+      <section class="app-view" id="productDetailView" style="display: none;">
+        <!-- Top Breadcrumbs & Back Navigation -->
+        <div class="product-top-bar">
+          <button class="back-to-products-btn" id="backToProductsBtn">
+            <span class="arrow">‹</span> Back to Products
+          </button>
+          <div class="product-breadcrumbs" id="productBreadcrumbs">
+            / ALL PANEL • BLOODSTRIKE / <span class="crumb-active">BLOODSTRIKE PANEL</span>
+          </div>
+        </div>
+
+        <!-- 2-Column Product Showcase Layout -->
+        <div class="product-detail-grid">
+          <!-- LEFT COLUMN: Media Showcase & Video Card -->
+          <div class="product-left-col">
+            <!-- Media Switcher Tabs -->
+            <div class="media-tabs-row">
+              <button class="media-tab-btn active" id="tabMediaImages">
+                <span class="media-tab-icon">📷</span> Images (<span id="mediaImagesCount">1</span>)
+              </button>
+              <button class="media-tab-btn" id="tabMediaVideo">
+                <span class="media-tab-icon">🎥</span> Demo Video (<span id="mediaVideoCount">1</span>)
+              </button>
+            </div>
+
+            <!-- Main Product Hero Image Card -->
+            <div class="product-main-media-card" id="productMediaCard">
+              <div class="media-overlay-badges">
+                <span class="badge-pill featured" id="detailBadgeFeatured">⭐ FEATURED</span>
+                <span class="badge-pill popular" id="detailBadgePopular">🔥 POPULAR</span>
+              </div>
+              <img id="detailHeroImage" src="" alt="Product Showcase Preview">
+            </div>
+
+            <!-- Product Showcase & Demo Video (Screenshot 4) -->
+            <div class="showcase-video-card" id="showcaseVideoCard">
+              <div class="showcase-header">
+                <div class="showcase-title">
+                  <span class="cam-icon">🎥</span> Product Showcase &amp; Demo Video
+                </div>
+                <span class="live-embed-badge">YOUTUBE LIVE EMBED</span>
+              </div>
+
+              <div class="video-preview-box" id="videoPreviewBox">
+                <img id="videoThumbnailImg" src="" alt="Demo Video Thumbnail">
+                <div class="video-overlay-gradient"></div>
+                <div class="video-top-meta">
+                  <span class="video-badge-title" id="videoBadgeTitle">BLOODSTRIKE PANEL Demo Video</span>
+                  <span class="video-hd-badge">HD</span>
+                </div>
+                <div class="play-btn-wrapper">
+                  <div class="play-pulse-circle"></div>
+                  <button class="video-play-btn" id="videoPlayBtn" aria-label="Play showcase">
+                    <span class="play-triangle"></span>
+                  </button>
+                  <span class="play-btn-label">Click to Watch Showcase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Details, Stats, and Plan Selector -->
+          <div class="product-right-col">
+            <div class="product-info-card">
+              <!-- Category Tags and VIP Access Badge -->
+              <div class="detail-cat-row">
+                <div class="detail-cat-tags" id="detailCatTags">
+                  <span class="detail-tag-pill">ALL PANEL</span>
+                  <span class="detail-tag-pill">BLOODSTRIKE</span>
+                </div>
+                <span class="vip-access-badge" id="detailVipBadge">⭐ VIP ACCESS</span>
+              </div>
+
+              <!-- Product Title -->
+              <h1 class="detail-product-title" id="detailProductTitle">
+                BLOODSTRIKE <span class="text-orange">PANEL</span>
+              </h1>
+
+              <!-- Product Description -->
+              <p class="detail-product-desc" id="detailProductDesc">
+                ⚡ BLOODSTRIKE PREMIUM PANEL — All-in-one powerful panel with tons of advanced features, Hidden Mode, smooth performance, and an easy-to-use interface. Specially optimized for YouTubers & medium-spec PCs. Get premium performance without unnecessary complexity. 🔥
+              </p>
+
+              <!-- Ratings & Purchases -->
+              <div class="detail-rating-row">
+                <div class="stars-box">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-num" id="detailRatingNum">5</span>
+                  <span class="reviews-count" id="detailReviewsCount">(0 reviews)</span>
+                </div>
+                <div class="purchases-box">
+                  <span class="user-icon">👥</span>
+                  <span id="detailPurchasesCount">0 purchases</span>
+                </div>
+              </div>
+
+              <!-- 3 Feature Stat Cards (Safety, Updates, Support) -->
+              <div class="feature-stats-row">
+                <div class="stat-box safety">
+                  <div class="stat-icon">🛡️</div>
+                  <div class="stat-label">Safety</div>
+                  <div class="stat-value green" id="detailSafetyVal">Undetected</div>
+                </div>
+                <div class="stat-box updates">
+                  <div class="stat-icon">🕒</div>
+                  <div class="stat-label">Updates</div>
+                  <div class="stat-value orange" id="detailUpdatesVal">Daily</div>
+                </div>
+                <div class="stat-box support">
+                  <div class="stat-icon">🎧</div>
+                  <div class="stat-label">Support</div>
+                  <div class="stat-value orange" id="detailSupportVal">24/7</div>
+                </div>
+              </div>
+
+              <!-- CHOOSE YOUR PLAN Section -->
+              <div class="choose-plan-section">
+                <div class="choose-plan-header">
+                  <h3 class="plan-header-title">CHOOSE YOUR PLAN</h3>
+                  <span class="plan-instant-text">Instant key activation</span>
+                </div>
+
+                <!-- Interactive Plan Selection Cards -->
+                <div class="plan-cards-list" id="detailPlanCardsList">
+                  <!-- Rendered dynamically -->
+                </div>
+
+                <!-- Checkout Action CTA -->
+                <div class="plan-checkout-action">
+                  <button class="buy-plan-main-btn" id="buyPlanMainBtn">
+                    <span>⚡</span>
+                    <span id="buyPlanBtnText">Buy Selected Plan (Instant Key Delivery)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM SECTION: Overview & Features Tabs (Screenshot 5) -->
+        <div class="product-bottom-section">
+          <div class="bottom-tabs-nav">
+            <button class="bottom-tab-btn active" id="tabOverviewBtn">Overview</button>
+            <button class="bottom-tab-btn" id="tabFeaturesBtn">Features</button>
+          </div>
+
+          <!-- Overview Tab Content -->
+          <div class="bottom-tab-content active" id="tabOverviewContent">
+            <div class="overview-box">
+              <div class="overview-header">
+                <span class="info-circle-icon">ℹ</span>
+                <span>Product description</span>
+              </div>
+
+              <div class="overview-section">
+                <div class="overview-bullet-title">• New Question?</div>
+                <div class="overview-specs-text" id="overviewSpecsText">
+                  Processor: Intel i3-10100,Intel i3-10100F,Ryzen 3 3200G,Ryzen 3 4100 CPU: 4 core RAM: 8GB minimum, 16GB better SSD: 120/240GB
+                </div>
+              </div>
+
+              <div class="overview-tags-row" id="overviewTagsRow">
+                <span class="spec-tag-pill">Undetected</span>
+                <span class="spec-tag-pill">Premium</span>
+                <span class="spec-tag-pill">Daily updates</span>
+                <span class="spec-tag-pill">24/7 support</span>
+              </div>
+
+              <div class="tech-specs-container">
+                <div class="tech-specs-header">
+                  <span class="sliders-icon">🎛</span> Technical Specifications
+                </div>
+                <div class="compat-box">
+                  <div class="compat-left">
+                    <span class="check-icon">✔</span> Compatibility
+                  </div>
+                  <div class="compat-right" id="overviewCompatText">
+                    Windows 10/11
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Tab Content -->
+          <div class="bottom-tab-content" id="tabFeaturesContent" style="display: none;">
+            <div class="features-grid-box" id="featuresListContainer">
+              <!-- Injected by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Footer Metadata Bar & Social Sharing -->
+          <div class="product-detail-footer">
+            <div class="footer-updated-date">
+              <span class="cal-icon">📅</span> Last updated: <span id="detailLastUpdated">6/21/2026</span>
+            </div>
+            <div class="footer-share-box">
+              <span class="share-label">Share this product:</span>
+              <div class="share-icons-row">
+                <button class="share-btn whatsapp" id="shareWhatsapp" title="Share via WhatsApp">💬</button>
+                <button class="share-btn telegram" id="shareTelegram" title="Share via Telegram">✈️</button>
+                <button class="share-btn x-twitter" id="shareTwitter" title="Share on X">𝕏</button>
+                <button class="share-btn facebook" id="shareFacebook" title="Share on Facebook">📘</button>
+                <button class="share-btn email" id="shareEmail" title="Share via Email">✉️</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           VIEW 3: DOWNLOADS VIEW
+           =================================================== -->
+      <section class="app-view" id="downloadsView" style="display: none;">
+        <div class="downloads-container">
+          <div class="downloads-header-row">
+            <div>
+              <h2 class="view-title">PREMIUM <span class="text-orange">DOWNLOADS</span></h2>
+              <p class="view-subtitle">Exclusive verified client files and loaders. Click below to download directly.</p>
+            </div>
+            <button class="btn-secondary" id="backToStoreFromDlBtn">← Back to Store</button>
+          </div>
+
+          <!-- Active License Card -->
+          <div class="active-license-banner">
+            <div>
+              <span class="active-license-badge">● Active License Verified</span>
+              <h3 class="active-license-name" id="activeLicenseTitle">BLOODSTRIKE PANEL (Life Time Access)</h3>
+              <p class="active-license-key-text" id="activeLicenseDetail">Key: <strong class="key-code">RED-VIP-9999</strong></p>
+            </div>
+            <button class="btn-primary" id="claimAnotherKeyInDlBtn">Claim Another Key</button>
+          </div>
+
+          <!-- 3 Downloads Grid: Emulator, APK, EXE -->
+          <div class="download-cards-grid">
+            <div class="download-card">
+              <div class="download-icon-box">🎮</div>
+              <h3 class="download-title">Optimized Emulator</h3>
+              <div class="download-meta">
+                <span class="download-badge">BYPASS READY</span>
+                <span class="download-size" id="emulatorSize">420 MB</span>
+                <span class="download-ver" id="emulatorVersion">v5.2.1</span>
+              </div>
+              <p class="download-desc">High-FPS pre-configured emulator with built-in anti-detection & 120FPS bypass.</p>
+              <a href="#" class="btn-primary dl-btn" id="downloadEmulatorBtn">Download Emulator</a>
+            </div>
+
+            <div class="download-card">
+              <div class="download-icon-box">📱</div>
+              <h3 class="download-title">Safe Modded APK</h3>
+              <div class="download-meta">
+                <span class="download-badge">OBB 54</span>
+                <span class="download-size" id="apkSize">85 MB</span>
+                <span class="download-ver" id="apkVersion">v1.108.x</span>
+              </div>
+              <p class="download-desc">Custom anti-ban APK with auto-headshot hook, antenna, and ESP features.</p>
+              <a href="#" class="btn-primary dl-btn" id="downloadApkBtn">Download APK</a>
+            </div>
+
+            <div class="download-card">
+              <div class="download-icon-box">💻</div>
+              <h3 class="download-title">External Panel Loader (EXE)</h3>
+              <div class="download-meta">
+                <span class="download-badge">UNDETECTED</span>
+                <span class="download-size" id="exeSize">18 MB</span>
+                <span class="download-ver" id="exeVersion">v4.9.0</span>
+              </div>
+              <p class="download-desc">Undetected external memory injector with Fake Lag, Aimbot, and Stream-Proof ESP.</p>
+              <a href="#" class="btn-primary dl-btn" id="downloadExeBtn">Download EXE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           VIEW 4: USER PROFILE VIEW
+           =================================================== -->
+      <section class="app-view" id="profileView" style="display: none;">
+        <div class="profile-container">
+          <h2 class="view-title">USER <span class="text-orange">PROFILE</span></h2>
+          <div class="profile-card-full">
+            <div class="profile-hero">
+              <div class="profile-big-avatar" id="profileBigAvatar">W</div>
+              <div class="profile-hero-info">
+                <h3 id="profileNameDisplay">wahida_parvin_r</h3>
+                <p id="profileEmailDisplay">wahida@dangerpanel.shop</p>
+                <div class="profile-pills">
+                  <span class="status-tag green">● ONLINE</span>
+                  <span class="status-tag orange">USER ACCESS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wallet-balance-card">
+              <div class="balance-left">
+                <span class="balance-label">WALLET BALANCE</span>
+                <div class="balance-number" id="profileWalletBalance">0.00 Credits</div>
+              </div>
+              <button class="btn-primary" id="addCreditsBtn">Top-Up Credits</button>
+            </div>
+
+            <div class="profile-licenses-section">
+              <h4 class="section-subheading">Active Purchased Licenses</h4>
+              <div id="profileLicensesList" class="licenses-list">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           VIEW 5: HELP & SUPPORT VIEW
+           =================================================== -->
+      <section class="app-view" id="helpView" style="display: none;">
+        <div class="help-container">
+          <h2 class="view-title">HELP &amp; <span class="text-orange">SUPPORT</span></h2>
+          <p class="view-subtitle">Need assistance with your panel, injection, or license keys? Reach out 24/7.</p>
+
+          <div class="help-grid">
+            <div class="help-card">
+              <div class="help-icon">✈️</div>
+              <h3>Telegram Support</h3>
+              <p>Direct live chat with our support team and instant announcements.</p>
+              <a href="https://t.me/dangerpanel" target="_blank" class="btn-primary">Open Telegram</a>
+            </div>
+            <div class="help-card">
+              <div class="help-icon">💬</div>
+              <h3>Discord Community</h3>
+              <p>Join thousands of verified members, get setup guides, and ticket support.</p>
+              <a href="https://discord.gg/dangerpanel" target="_blank" class="btn-primary">Join Discord</a>
+            </div>
+            <div class="help-card">
+              <div class="help-icon">📱</div>
+              <h3>WhatsApp Helpdesk</h3>
+              <p>Fast payment verification, manual key delivery, and bKash assistance.</p>
+              <a href="https://wa.me/dangerpanel" target="_blank" class="btn-primary">Chat on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===================================================
+       MODAL: YOUTUBE DEMO VIDEO SHOWCASE MODAL
+       =================================================== -->
+  <div class="modal-overlay" id="videoShowcaseModal">
+    <div class="modal-box video-modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>🎥</span>
+          <span id="videoModalHeaderTitle">Product Showcase Video</span>
+        </div>
+        <button class="modal-close-btn" data-close="videoShowcaseModal">&times;</button>
+      </div>
+      <div class="modal-body video-modal-body">
+        <div class="video-embed-frame" id="videoEmbedContainer">
+          <iframe id="videoIframe" width="100%" height="420" src="" title="Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================
+       MODAL: PURCHASE & INSTANT ACTIVATION
+       =================================================== -->
+  <div class="modal-overlay" id="purchaseModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>💳</span>
+          <span>Instant Checkout & Key Activation</span>
+        </div>
+        <button class="modal-close-btn" data-close="purchaseModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="checkout-summary-card">
+          <div class="summary-row">
+            <strong id="checkoutProductTitle" class="checkout-prod-name">BLOODSTRIKE PANEL</strong>
+            <span id="checkoutPackageDuration" class="checkout-duration-tag">Life Time Access</span>
+          </div>
+          <div class="checkout-price-display" id="checkoutPriceText">
+            60.00 Credits
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Choose Payment Method</label>
+          <div class="payment-methods-grid">
+            <label class="payment-choice">
+              <input type="radio" name="payMethod" value="bKash" checked>
+              <span><strong>bKash</strong> (BD Instant)</span>
+            </label>
+            <label class="payment-choice">
+              <input type="radio" name="payMethod" value="Nagad">
+              <span><strong>Nagad</strong> (BD)</span>
+            </label>
+            <label class="payment-choice">
+              <input type="radio" name="payMethod" value="Binance">
+              <span><strong>Binance Pay / USDT</strong></span>
+            </label>
+            <label class="payment-choice">
+              <input type="radio" name="payMethod" value="Card">
+              <span><strong>Debit / Credit Card</strong></span>
+            </label>
+          </div>
+        </div>
+
+        <p class="instant-delivery-notice">
+          ⚡ Upon payment completion, your license key will be generated instantly and downloads unlocked!
+        </p>
+
+        <button class="btn-primary confirm-pay-btn" id="confirmPurchaseBtn">
+          Confirm Order &amp; Activate License
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================
+       MODAL: CLAIM LICENSE KEY
+       =================================================== -->
+  <div class="modal-overlay" id="claimKeyModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>🎟️</span>
+          <span>Redeem License Key</span>
+        </div>
+        <button class="modal-close-btn" data-close="claimKeyModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtext">
+          Enter your license key provided by the store admin or reseller. Unlocks all loader downloads immediately.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">License Key Code</label>
+          <input type="text" class="form-input key-input-field" id="claimKeyInput" placeholder="e.g. RED-VIP-9999 or DEMO-KEY-1USE">
+        </div>
+
+        <div class="tip-box">
+          💡 <em>Preloaded test VIP key: <strong class="text-orange">RED-VIP-9999</strong></em>
+        </div>
+
+        <button class="btn-primary" id="submitClaimKeyBtn" style="width: 100%;">
+          Redeem &amp; Unlock Downloads
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================
+       MODAL: LOGIN / USER SWITCH
+       =================================================== -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>👤</span>
+          <span>Account Login</span>
+        </div>
+        <button class="modal-close-btn" data-close="loginModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtext">
+          Log in with your username or email to view purchased keys and unlock premium downloads.
+        </p>
+
+        <form id="emailLoginForm">
+          <div class="form-group">
+            <label class="form-label">Username / Gamer Tag</label>
+            <input type="text" class="form-input" id="loginNameInput" placeholder="wahida_parvin_r" value="wahida_parvin_r" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" id="loginEmailInput" placeholder="wahida@dangerpanel.shop" value="wahida@dangerpanel.shop" required>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">
+            Login / Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script src="app.js"></script>
+</body>
+</html>

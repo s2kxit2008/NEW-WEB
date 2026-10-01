@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADMIN LOGIN | ONLY RED SHOP</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔴</text></svg>">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-main);
+    }
+    .admin-login-wrap {
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+    }
+    .admin-login-box {
+      background: #0f1017;
+      border: 1px solid var(--border-red);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 40px rgba(255,30,70,0.2);
+    }
+    .admin-login-logo {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .admin-login-logo h1 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .admin-login-logo h1 span {
+      color: var(--accent-red);
+    }
+    .admin-login-logo p {
+      color: var(--text-dim);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    .admin-login-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    .error-msg {
+      background: rgba(255, 30, 70, 0.1);
+      border: 1px solid rgba(255, 30, 70, 0.4);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      color: #ff4d6e;
+      font-size: 13px;
+      margin-bottom: 18px;
+      display: none;
+    }
+    .error-msg.visible {
+      display: block;
+    }
+    .admin-login-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+    .admin-login-footer a {
+      color: var(--accent-red);
+      text-decoration: none;
+    }
+    .admin-login-footer a:hover {
+      text-decoration: underline;
+    }
+    .lock-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <div class="admin-login-wrap">
+    <div class="admin-login-box">
+      <div class="admin-login-logo">
+        <div class="lock-icon">🔐</div>
+        <h1>ONLY <span>RED</span> SHOP</h1>
+        <p>Admin Control Panel</p>
+      </div>
+
+      <div class="admin-login-title">
+        <span>⚙️</span>
+        <span>Admin Login</span>
+      </div>
+
+      <div class="error-msg" id="loginError">
+        ❌ Invalid username or password.
+      </div>
+
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-input" id="adminUser" placeholder="Enter username" autocomplete="username" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" id="adminPass" placeholder="Enter password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 4px;">
+          🔓 Login to Admin Panel
+        </button>
+      </form>
+
+      <div class="admin-login-footer">
+        <a href="/">← Back to Store</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Check if already logged in
+    if (sessionStorage.getItem("admin_logged_in") === "yes") {
+      window.location.href = "/admin-panel.html";
+    }
+
+    document.getElementById("adminLoginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const user = document.getElementById("adminUser").value.trim();
+      const pass = document.getElementById("adminPass").value;
+
+      try {
+        const res = await fetch("/api/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username: user, password: pass })
+        });
+        const data = await res.json();
+        if (data.success) {
+          sessionStorage.setItem("admin_logged_in", "yes");
+          window.location.href = "/admin-panel.html";
+        } else {
+          document.getElementById("loginError").classList.add("visible");
+        }
+      } catch (err) {
+        document.getElementById("loginError").textContent = "❌ Server connection error.";
+        document.getElementById("loginError").classList.add("visible");
+      }
+    });
+  </script>
+</body>
+</html>
